@@ -1,8 +1,8 @@
 :root {
     --accent-1: #ff2d75;
     --accent-2: #7c3aed;
-    --text-main: #ffffff;
-    --card-bg: rgba(255, 255, 255, 0.08);
+    --text-main: #222222;
+    --card-bg: #ffffff;
 }
 
 * {
@@ -14,9 +14,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #ff6b9d, #c850c0, #6366f1, #4f46e5, #ff6b9d, #f472b6);
-    background-size: 600% 600%;
-    animation: gradientBG 12s ease infinite;
+    background: #ffffff;
     color: var(--text-main);
     display: flex;
     justify-content: center;
@@ -27,14 +25,7 @@ body {
     position: relative;
 }
 
-/* Arkaplan Animasyonu */
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 50% 100%; }
-    50% { background-position: 100% 50%; }
-    75% { background-position: 50% 0%; }
-    100% { background-position: 0% 50%; }
-}
+
 
 /* Arka planda yüzen balonlar/emojiler */
 body::before,
@@ -42,7 +33,7 @@ body::after {
     content: '🎂 🎈 🎁 🥳 🎉 ✨ 🎊 💖';
     position: fixed;
     font-size: 1.6rem;
-    opacity: 0.15;
+    opacity: 0.8;
     white-space: nowrap;
     animation: floatEmojis 20s linear infinite;
     pointer-events: none;
@@ -76,12 +67,10 @@ body::after {
 /* Glassmorphism Kart Tasarımı */
 .card {
     background: var(--card-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 28px;
     padding: 20px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2), inset 0 0 30px rgba(255,255,255,0.05);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
     gap: 20px;
